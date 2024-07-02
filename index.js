@@ -1,12 +1,12 @@
 const { Telegraf, Markup } = require('telegraf')
 
-const token = "7054554428:AXE3dy3KJ0M82JwMkaLyT5SyuM3gqDkAfK8";
+const token = "7054554428:AAE3dy3KJ0M82JwMkaLyT5SyuM3gqDkAfK8";
 if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!')
 }
 
 const gameShortName = 'infinitecrusade'
-const gameUrl = 'https://heredis12.github.io/infinitecrusade/'
+const gameUrl = 'https://github.com/heredis12/wealthycat_tg'
 
 const markup = Markup.inlineKeyboard([
   Markup.button.game('🎮 Play now!'),
