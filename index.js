@@ -1,17 +1,25 @@
 const { Telegraf, Markup } = require('telegraf')
 
-const token = "7054554428:AAE3dy3KJ0M82JwMkaLyT5SyuM3gqDkAfK8";
+const token = "7403988653:AAG-rRgaKUiXPzqy40OcBm8vHCQjjScPJSE";
 if (token === undefined) {
   throw new Error('BOT_TOKEN must be provided!')
 }
 
-const gameShortName = 'infinitecrusade'
+const gameShortName = 'wealthycat_tg'
 const gameUrl = 'https://github.com/heredis12/wealthycat_tg'
 
 const markup = Markup.inlineKeyboard([
   Markup.button.game('🎮 Play now!'),
   Markup.button.url('Telegraf help', 'http://telegraf.js.org')
 ])
+
+bot.on(message('text'), async (ctx) => {
+    // Explicit usage
+    await ctx.telegram.sendMessage(ctx.message.chat.id, `Hello ${ctx.state.role}`)
+  
+    // Using context shortcut
+    await ctx.reply(`Hello ${ctx.state.role}`)
+  })
 
 const bot = new Telegraf(token)
 bot.start((ctx) => ctx.replyWithGame(gameShortName))
