@@ -19,7 +19,7 @@ bot.on("callback_query", function (query) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://github.com/heredis12/wealthycat_tg";
+        let gameurl = "https://heredis12.github.io/wealthycat_tg/";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
