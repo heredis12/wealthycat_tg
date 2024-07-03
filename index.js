@@ -4,7 +4,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "7247649430:AAGq1xQz2uebcReb4Rx4KpGDbQffPtrQJcA";
 const server = express();
 const bot = new TelegramBot(TOKEN, {
-    polling: false
+    polling: true
 });
 const port = process.env.PORT || 5000;
 const gameName = "wealthycat";
