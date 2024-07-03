@@ -9,9 +9,11 @@ const bot = new TelegramBot(TOKEN, {
 const port = process.env.PORT || 5000;
 const gameName = "wealthycat";
 const queries = {};
+
 server.use(express.static(path.join(__dirname, '')));
 bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "Say /game if you want to play."));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
+
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
@@ -24,13 +26,15 @@ bot.on("callback_query", function (query) {
         });
     }
 });
+
 bot.on("inline_query", function (iq) {
     bot.answerInlineQuery(iq.id, [{
         type: "game",
-        id: "0",
+        id: "1",
         game_short_name: gameName
     }]);
 });
+
 server.get("/highscore/:score", function (req, res, next) {
     if (!Object.hasOwnProperty.call(queries, req.query.id)) return next();
     let query = queries[req.query.id];
