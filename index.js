@@ -5,20 +5,20 @@ const gameShortName = 'wealthycat'
 const gameUrl = 'https://heredis12.github.io/wealthycat_tg/'
 
 const bot = new Telegraf("7247649430:AAGq1xQz2uebcReb4Rx4KpGDbQffPtrQJcA")
-//bot.start((ctx) => ctx.replyWithGame(gameShortName))
+bot.start((ctx) => ctx.replyWithGame(gameShortName))
 bot.gameQuery((ctx) => ctx.answerGameQuery(gameUrl))
 
 
 bot.help((ctx) => ctx.reply('Send me a sticker'))
 bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
 //bot.hears('hi', (ctx) => ctx.reply('Hey there'))
-bot.start((ctx)=>{
-  ctx.reply('Check out this link: https://example.com\n\nPlease share it with your friends by forwarding this message!', 
-    Markup.inlineKeyboard([
-      Markup.button.callback('Share this link', 'share')
-    ])
-  );
-})
+// bot.start((ctx)=>{
+//   ctx.reply('Check out this link: https://example.com\n\nPlease share it with your friends by forwarding this message!', 
+//     Markup.inlineKeyboard([
+//       Markup.button.callback('Share this link', 'share')
+//     ])
+//   );
+// })
 
 bot.action('share', (ctx) => {
   ctx.reply(
