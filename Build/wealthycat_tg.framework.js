@@ -4775,11 +4775,6 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          navigator.share({
-                  title: 'Share Example',
-                  text: 'https://example.com'
-              });
-  
           window.open('https://t.me/share/url?url=https://example.com')
       }
 
