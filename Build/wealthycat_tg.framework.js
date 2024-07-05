@@ -4776,9 +4776,11 @@ var ASM_CONSTS = {
 
   function _ShareOnTelegram(){
           navigator.share({
-                  title: 'Wordle Clone',
-                  text: 'https://t.me/share/url?url=https://example.com'
+                  title: 'Share Example',
+                  text: 'https://example.com'
               });
+  
+          window.open('https://t.me/share/url?url=https://example.com')
       }
 
   function _ShowMessage(message){
