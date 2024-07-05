@@ -29,6 +29,10 @@ bot.action('share', (ctx) => {
   );
 });
 
+function ShareWithFriends(){
+  open('https://t.me/share/url?url=https://example.com');
+}
+
 bot.launch()
 
 // Enable graceful stop

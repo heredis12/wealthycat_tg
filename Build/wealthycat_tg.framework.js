@@ -4775,7 +4775,7 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          window.alert("WOW");
+          ShareWithFriends();
       }
 
   function _ShowMessage(message){
