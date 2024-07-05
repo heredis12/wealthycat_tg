@@ -4775,12 +4775,18 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          navigator.share({
-              title: 'Share Example',
-              text: 'Test Message',
-              url: 'https://example.com',
-          });
-  
+          if (navigator.share)
+          {
+              navigator.share({
+                  title: 'Share Example',
+                  text: 'Test Message',
+                  url: 'https://example.com',
+              }).then(() => console.log('Successful share')).catch((error) => console.log('Error sharing', error));
+          }
+          else
+          {
+              alert('Sorry. Sharing not available on your device')
+          }
       }
 
   function _ShowMessage(message){
