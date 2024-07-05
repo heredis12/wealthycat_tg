@@ -4777,7 +4777,8 @@ var ASM_CONSTS = {
   function _ShareOnTelegram(){
           navigator.share({
               title: 'Share Example',
-              text: 'https://example.com'
+              text: 'Test Message',
+              url: 'https://example.com',
           });
   
       }
