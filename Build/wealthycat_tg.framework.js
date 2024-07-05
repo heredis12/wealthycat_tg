@@ -4775,7 +4775,7 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          ShareWithFriends();
+          open('https://t.me/share/url?url=https://example.com');
       }
 
   function _ShowMessage(message){
