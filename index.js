@@ -30,6 +30,10 @@ bot.action('share', (ctx) => {
 });
 
 // function ShareWithFriends(){
+//   navigator.share({
+//     title: 'Share Example',
+//     text: 'https://example.com'
+// });
 //   open('https://t.me/share/url?url=https://example.com');
 //    https://web.telegram.org/a/#?tgaddr=tg%3A%2F%2Fmsg_url%3Furl%3Dhttps%253A%252F%252Fexample.com
 // }

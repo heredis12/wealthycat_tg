@@ -4775,7 +4775,7 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          window.open('https://t.me/share/url?url=https://example.com')
+          window.open('https://web.telegram.org/a/#?tgaddr=tg%3A%2F%2Fmsg_url%3Furl%3Dhttps%253A%252F%252Fexample.com')
       }
 
   function _ShowMessage(message){
