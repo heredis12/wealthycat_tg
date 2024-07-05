@@ -4775,7 +4775,7 @@ var ASM_CONSTS = {
   	}
 
   function _ShareOnTelegram(){
-          window.location.href = 'https://t.me/share/url?url=https://example.com';
+          window.open('https://t.me/share/url?url=https://example.com');
       }
 
   function _ShowMessage(message){
